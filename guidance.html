@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            justify-content:center;
+            align-items:center;
+            display:flex;
+        }
+        .container{
+            box-shadow: 0 0 0px;
+            height: 23cm;
+            width: 10cm;
+            border: 2px solid black;
+        }
+        .container header{
+            background-color: rgb(0,185, 255);
+            display:flex;
+        }
+        h3{
+            padding-left: 0.5cm;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 21px;
+        }
+        .container header button{
+            height:0.8cm;
+            width: 1.5cm;
+            transform:translate(150px,14px);
+            background-color: rgba(5, 255, 10, 1);
+            border:none;
+            box-shadow: 0 0 1px;
+        }
+        .container header button:active{
+            background-color: rgba(120, 255, 10, 1);
+        }
+        p{
+            text-align:center;
+            font-size: 17px;
+        }
+        .radio{
+            padding-left: 20px;
+        }
+        #displayArea{
+            text-align:center;
+            padding-top: 20px;
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: green;
+        }
+        #text{
+            color: rgb(6, 234, 48);
+            font-size: 20;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPPUThelper</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>OPPUThelper</h3>
+            <button id="button" onclick="
+            const word = document.getElementById('text');
+            word.innerHTML = 'Here is your carrier:';
+            "> Find</button>
+        </header>
+        <p>OPPUThelper is a platform that allows people to find their dream occupations based on what they like</p>
+        <hr>
+        <p>Choose what you like!</p>
+        <div class="radio">
+            <h3>What do you Enjoy the most</h3>
+            <input class="checkIt" id="one" type="checkbox">
+            <label for="one">Working with people</label><br><br>
+            <input class="checkIt" id="two" type="checkbox">
+            <label for="two">Working with ideas</label><br><br>
+            <input class="checkIt" id="three" type="checkbox">
+            <label for="three">Working with things</label><br><br>
+            <h3>What do you like doing in your free time?</h3>
+            <input class="checkIt" class="checkIt" id="four" type="checkbox">
+            <label for="four">Reading / learning</label><br><br>
+            <input class="checkIt" id="five" type="checkbox">
+            <label for="five">Playing games / creating content</label><br><br>
+            <input class="checkIt" id="six" type="checkbox">
+            <label for="six">Building / fixing things</label><br><br>
+            <h3>Which type of work appeals to you?</h3>
+            <input class="checkIt" id="seven" type="checkbox">
+            <label for="seven">Science / Math</label><br><br>
+            <input class="checkIt" id="eight" type="checkbox">
+            <label for="eight">Arts / Literature</label><br><br>
+            <input class="checkIt" id="nine" type="checkbox">
+            <label for="nine">Technology / Computers</label><br>
+        </div>
+        <p id="text">Your carrier will be displayed bellow:</p>
+        <div id="displayArea"></div>
+    </div>
+    <script>
+        const boxes = document.querySelectorAll(".checkIt");
+
+        boxes.forEach(checkbox =>{
+            checkbox.addEventListener("change", ()=>{
+                const checked = document.querySelectorAll(".checkIt:checked");
+                if(checked.length > 2){
+                    checkbox.checked = false;
+                }
+            })
+        })
+        document.getElementById('button').addEventListener("click",()=>{
+            box1();
+            box2();
+            box3();
+            box4();
+            box5();
+            box6();
+            box7();
+            box8();
+            box9();
+            box12();
+            box13();
+            box14();
+            box15();
+            box16();
+            box17();
+            box18();
+            box19();
+            box23();
+            box24();
+            box25();
+            box26();
+            box27();
+            box28();
+            box29();
+            box34();
+            box35();
+            box36();
+            box37();
+            box38();
+            box39();
+            box45();
+            box46();
+            box47();
+            box48();
+            box49();
+            box56();
+            box57();
+            box58();
+            box59();
+            box67();
+            box68();
+            box69();
+            box78();
+            box79();
+            box89();
+        });
+        function box1(){
+            const b1 = document.getElementById('one');
+            const d1 = document.getElementById('displayArea');
+            if(b1.checked){
+                d1.innerHTML = `<div> A teacher,Sales,counselling</div>`;
+            }else{
+                d1.innerHTML = "";
+            }
+        }
+        function box2(){
+            const b2 = document.getElementById('two');
+            const d2 = document.getElementById('displayArea');
+            if(b2.checked){
+                d2.innerHTML = `<div>Researcher,Engineering,academics</div>`;
+            }
+        }
+        function box3(){
+            const b3 = document.getElementById('three');
+            const d3 = document.getElementById('displayArea');
+            if(b3.checked){
+                d3.innerHTML = `<div>Manufacturing,Construction&fabrication</div>`;
+            }
+        }
+        function box4(){
+            const b4 = document.getElementById('four');
+            const d4 = document.getElementById('displayArea');
+            if(b4.checked){
+                d4.innerHTML = `<div>Lawyer,Data analyst,Policy writing</div>`
+            }
+        }
+        function box5(){
+            const b5 = document.getElementById('five');
+            const d5 = document.getElementById('displayArea');
+            if(b5.checked){
+                d5.innerHTML = `<div>Game design,video editor,UI/UX designer</div>`
+            }
+        }
+        function box6(){
+            const b6 = document.getElementById('six');
+            const d6 = document.getElementById('displayArea');
+            if(b6.checked){
+                d6.innerHTML = `<div>Engineering,carpentry,Automotivation</div>`;
+            }
+        }
+        function box7(){
+            const b7 = document.getElementById('seven');
+            const d7 = document.getElementById('displayArea');
+            if(b7.checked){
+                d7.innerHTML = `<div>Health care,Teaching,community outreach</div>`
+            }
+        }
+         function box8(){
+            const b8 = document.getElementById('eight');
+            const d8 = document.getElementById('displayArea');
+            if(b8.checked){
+                d8.innerHTML = `<div>Art person,Library worker,Public speaker</div>`;
+            }
+        }
+         function box9(){
+            const b9 = document.getElementById('nine');
+            const d9 = document.getElementById('displayArea');
+            if(b9.checked){
+                d9.innerHTML = `<div>Software building,coder<div>`;
+            }
+        }
+        function box12(){
+            const b1 = document.getElementById('one');
+            const b2 = document.getElementById('two');
+            const d12 = document.getElementById('displayArea');
+            if(b1.checked && b2.checked){
+                d12.innerHTML = `<div>Teaching,training</div>`;
+            }
+        }
+        function box13(){
+            const b1 = document.getElementById('one');
+            const b3 = document.getElementById('three');
+            const d13 = document.getElementById('displayArea');
+            if(b1.checked && b3.checked){
+                d13.innerHTML = `<div>Medical tech,nursing,doctor,Engineer</div>`;
+            }
+        }
+        function box14(){
+            const b1 = document.getElementById('one');
+            const b4 = document.getElementById('four');
+            const d14 = document.getElementById('displayArea');
+            if(b1.checked && b4.checked){
+                d14.innerHTML = `<div>Psychologist<counselor</div>`;
+            }
+        }
+         function box15(){
+            const b1 = document.getElementById('one');
+            const b5 = document.getElementById('five');
+            const d15 = document.getElementById('displayArea');
+            if(b1.checked && b5.checked){
+                d15.innerHTML = `<div>Presenter,influencer manager</div>`;
+            }
+        }
+         function box16(){
+            const b1 = document.getElementById('one');
+            const b6 = document.getElementById('six');
+            const d16 = document.getElementById('displayArea');
+            if(b1.checked && b6.checked){
+                d16.innerHTML = `<div>Hospitalist,community technician</div>`;
+            }
+        }
+         function box17(){
+            const b1 = document.getElementById('one');
+            const b7 = document.getElementById('seven');
+            const d17 = document.getElementById('displayArea');
+            if(b1.checked && b7.checked){
+                d17.innerHTML = `<div>Scientist,Economist</div>`;
+            }
+        }
+         function box18(){
+            const b1 = document.getElementById('one');
+            const b8 = document.getElementById('eight');
+            const d18 = document.getElementById('displayArea');
+            if(b1.checked && b8.checked){
+                d18.innerHTML = `<div>Creative strategiest,game designer</div>`;
+            }
+        }
+         function box19(){
+            const b1 = document.getElementById('one');
+            const b9 = document.getElementById('nine');
+            const d19 = document.getElementById('displayArea');
+            if(b1.checked && b9.checked){
+                d19.innerHTML = `<div>Engineer,invetor</div>`;
+            }
+        }
+         function box23(){
+            const b2 = document.getElementById('two');
+            const b3 = document.getElementById('three');
+            const d23 = document.getElementById('displayArea');
+            if(b2.checked && b3.checked){
+                d23.innerHTML = `<div>Lab technician,Conservation tech</div>`;
+            }
+        }
+         function box24(){
+            const b2 = document.getElementById('two');
+            const b4 = document.getElementById('four');
+            const d24 = document.getElementById('displayArea');
+            if(b2.checked && b4.checked){
+                d24.innerHTML = `<div>AV specialist,Muiltimedia technician</div>`;
+            }
+        }
+         function box25(){
+            const b2 = document.getElementById('two');
+            const b5 = document.getElementById('five');
+            const d25 = document.getElementById('displayArea');
+            if(b2.checked && b5.checked){
+                d25.innerHTML = `<div>builder,Electrician</div>`;
+            }
+        }
+         function box26(){
+            const b2 = document.getElementById('two');
+            const b6 = document.getElementById('six');
+            const d26 = document.getElementById('displayArea');
+            if(b2.checked && b6.checked){
+                d26.innerHTML = `<div>Nurse,public health</div>`;
+            }
+        }
+         function box27(){
+            const b2 = document.getElementById('two');
+            const b7 = document.getElementById('seven');
+            const d27 = document.getElementById('displayArea');
+            if(b2.checked && b7.checked){
+                d27.innerHTML = `<div>Writer,Journalist,Drama teacher</div>`;
+            }
+        }
+         function box28(){
+            const b2 = document.getElementById('two');
+            const b8 = document.getElementById('eight');
+            const d28 = document.getElementById('displayArea');
+            if(b2.checked && b8.checked){
+                d28.innerHTML = `<div>IT support,tech trainer</div>`;
+            }
+        }
+         function box29(){
+            const b2 = document.getElementById('two');
+            const b9 = document.getElementById('nine');
+            const d29 = document.getElementById('displayArea');
+            if(b2.checked && b9.checked){
+                d29.innerHTML = `<div>Physicist,mathematician,Researcher</div>`;
+            }
+        }
+         function box34(){
+            const b3 = document.getElementById('three');
+            const b4 = document.getElementById('four');
+            const d34 = document.getElementById('displayArea');
+            if(b3.checked && b4.checked){
+                d34.innerHTML = `<div>author,designer,filmmaker</div>`;
+            }
+        }
+         function box35(){
+            const b3 = document.getElementById('three');
+            const b5 = document.getElementById('five');
+            const d13 = document.getElementById('displayArea');
+            if(b3.checked && b5.checked){
+                d35.innerHTML = `<div>Software engineering,cybersec</div>`;
+            }
+        }
+         function box36(){
+            const b3= document.getElementById('three');
+            const b6 = document.getElementById('six');
+            const d36 = document.getElementById('displayArea');
+            if(b3.checked && b6.checked){
+                d36.innerHTML = `<div>Engineering assistant></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div>set designer,product designer</div>`;
+            }
+        }
+         function box38(){
+            const b3 = document.getElementById('three');
+            const b8 = document.getElementById('eight');
+            const d38 = document.getElementById('displayArea');
+            if(b3.checked && b8.checked){
+                d38.innerHTML = `<div></div>`;
+    }
+        }
+         function box39(){
+            const b3 = document.getElementById('three');
+            const b9 = document.getElementById('nine');
+            const d39 = document.getElementById('displayArea');
+            if(b3.checked && b9.checked){
+                d39.innerHTML = `<div></div>`;
+            }
+        }
+         function box46(){
+            const b4 = document.getElementById('four');
+            const b6 = document.getElementById('six');
+            const d46 = document.getElementById('displayArea');
+            if(b4.checked && b6.checked){
+                d46.innerHTML = `<div></div>`;
+            }
+        }
+         function box47(){
+            const b4 = document.getElementById('four');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b4.checked && b7.checked){
+                d47.innerHTML = `<div></div>`;
+            }
+        }
+         function box48(){
+            const b4 = document.getElementById('four');
+            const b8 = document.getElementById('eight');
+            const d48 = document.getElementById('displayArea');
+            if(b4.checked && b8.checked){
+                d48.innerHTML = `<div></div>`;
+            }
+        }
+         function box49(){
+            const b4 = document.getElementById('four');
+            const b9 = document.getElementById('nine');
+            const d49 = document.getElementById('displayArea');
+            if(b4.checked && b9.checked){
+                d49.innerHTML = `<div></div>`;
+            }
+        }
+         function box56(){
+            const b5 = document.getElementById('five');
+            const b6 = document.getElementById('six');
+            const d56 = document.getElementById('displayArea');
+            if(b5.checked && b6.checked){
+                d56.innerHTML = `<div></div>`;
+            }
+        }
+         function box57(){
+            const b5 = document.getElementById('five');
+            const b7 = document.getElementById('seven');
+            const d57 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d57.innerHTML = `<div></div>`;
+            }
+        }
+         function box58(){
+            const b5 = document.getElementById('five');
+            const b8 = document.getElementById('eight');
+            const d58 = document.getElementById('displayArea');
+            if(b5.checked && b8.checked){
+                d58.innerHTML = `<div></div>`;
+            }
+        }
+         function box59(){
+            const b5 = document.getElementById('five');
+            const b9 = document.getElementById('nine');
+            const d59 = document.getElementById('displayArea');
+            if(b5.checked && b9.checked){
+                d59.innerHTML = `<div></div>`;
+            }
+        }
+         function box67(){
+            const b6 = document.getElementById('six');
+            const b7 = document.getElementById('seven');
+            const d67 = document.getElementById('displayArea');
+            if(b6.checked && b7.checked){
+                d67.innerHTML = `<div></div>`;
+            }
+        }
+         function box68(){
+            const b6 = document.getElementById('six');
+            const b8 = document.getElementById('eight');
+            const d68 = document.getElementById('displayArea');
+            if(b6.checked && b8.checked){
+                d68.innerHTML = `<div>r</div>`;
+            }
+        }
+         function box69(){
+            const b6 = document.getElementById('six');
+            const b9 = document.getElementById('nine');
+            const d69 = document.getElementById('displayArea');
+            if(b6.checked && b9.checked){
+                d69.innerHTML = `<div></div>`;
+            }
+        }
+         function box78(){
+            const b7 = document.getElementById('seven');
+            const b8 = document.getElementById('eight');
+            const d37 = document.getElementById('displayArea');
+            if(b7.checked && b8.checked){
+                d78.innerHTML = `<div></div>`;
+            }
+        }
+         function box79(){
+            const b7 = document.getElementById('seven');
+            const b9 = document.getElementById('nine');
+            const d79 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d79.innerHTML = `<div></div>`;
+            }
+        }
+         function box89(){
+            const b8 = document.getElementById('eight');
+            const b9 = document.getElementById('nine');
+            const d89 = document.getElementById('displayArea');
+            if(b8.checked && b9.checked){
+                d89.innerHTML = `<div></div>`;
+            }
+        }
+         function box123(){
+            const b1 = document.getElementById('one');
+            const b2 = document.getElementById('two');
+            const b3 = document.getElementById('three');
+            const d123 = document.getElementById('displayArea');
+            if(b1.checked && b2.checked && b3.checked){
+                d123.innerHTML = `<div>Socialworker</div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div>s</div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+         function box37(){
+            const b3 = document.getElementById('three');
+            const b7 = document.getElementById('seven');
+            const d37 = document.getElementById('displayArea');
+            if(b3.checked && b7.checked){
+                d37.innerHTML = `<div></div>`;
+            }
+        }
+    </script>
+</body>
+</html>
